@@ -3,8 +3,8 @@ var rows = ['one','two','three','four','five','six','seven',
 'eight'];
 var fadeTime = 300;
 
-var player = 0;
-var colors = ['red', 'black'];
+var player1 = 0;
+var colors = ['yellow', 'purple'];
 
 $(".place").click(function(){
 	var classes = ($(this).attr('class')).split(" ");
@@ -43,8 +43,8 @@ $(".place").click(function(){
 function rotateColor(t){
 	$(t).fadeOut(fadeTime);
 	setTimeout(function(){
-		$(t).addClass(""+colors[player]+"");
-		player == 0 ? player = 1 : player = 0;
+		$(t).addClass(""+colors[player1]+"");
+		player1 == 0 ? player1 = 1 : player1 = 0;
 	}, fadeTime);
 	$(t).fadeIn(fadeTime);
 }

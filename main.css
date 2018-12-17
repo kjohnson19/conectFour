@@ -1,7 +1,7 @@
 /* =============================splash page========================= */ 
 
 h1{
-color: blue;
+color: yellow;
 font-size: 65px;
 font-family: 'Acme', sans-serif;
 text-align: center;
@@ -17,11 +17,10 @@ margin-left:-1000px;
 }
 100% {
 margin-left: 530px;
-}
-}
+}}
 /* background image- source: https://www.ebay.com/itm/Hasbro-Connect-4-Game/352531569730?_trkparms=aid%3D222007%26algo%3DSIM.MBE%26ao%3D2%26asc%3D20160323102634%26meid%3D6afb38c8839f4f878ce99aec3d34e685%26pid%3D100623%26rk%3D4%26rkt%3D6%26sd%3D323034430832%26itm%3D352531569730&_trksid=p2047675.c100623.m-1 */
-body {
-background: url(/images/split.png);
+#bg1 {
+background: url(/images/c42.png);
 background-size: 100% 100%;
 }
 
@@ -30,7 +29,7 @@ display: flex;
 flex-wrap: wrap;
 }
 
-button {
+#playMe {
 margin-top: 450px;
 margin-left: 600px;
 font-size: 24px;
@@ -40,7 +39,7 @@ border-radius: 60px;
 transition-duration: 0.4s;
 }
 
-button:hover {
+#playMe:hover {
 background-color: red; 
 color: white;
 }
@@ -97,7 +96,7 @@ to { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200p
 	width: 33.3333333333%;
 }
 .col-5{
-	width: 41.6666666667%;
+	width: 1050%;
 }
 .col-6{
 	width: 50%;
@@ -130,53 +129,56 @@ $player-one: #DD2328;
 $player-two: #EED242;
 $ff: "Trebuchet MS", Helvetica, sans-serif; */
 
-body{
-    background: url(/images/shapes.jpeg);
-    background-size: cover;
+.gamebg{
+    background: url(/images/maxresdefault.jpg);
+    background-size: 100% 100%;
     font-family:Trebuchet MS", Helvetica, sans-serif ;
 }
 
 #board{
+    margin-left: 100px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     width: 700px;
-    height:500px;
+    height: 500px;
     padding: 10px;
-    background: lightblue;
-
-    border: 3px solid #1D2A5E;;
+    background:none;
+    /* border: 3px solid #1D2A5E;; */
 }
 #board .column{
-    margin: auto;
+    margin-left:110px;
     width: 2090px;
 }
 
 .place{
-    width: 32px;
-    height:32px;
+    box-shadow:0px 0px 55px yellow;
+    width: 80px;
+    height:80px;
     margin: 10px;
-    background: #82D0F4;
+    background: url(/images/tropical.jpeg);
+    /* background: #82D0F4; */
     border-radius: 100%;
     border: 2px solid #1D2A5E;
 }
 
 .place:hover{
     cursor: pointer;
+    scale: 0.5;
 }
 
-.red{
+.yellow{
     background:#DD2328 ;
     color: #EED242;
     font-weight: bold;
 }
 
-.black{
+.purple{
     background: #EED242;
     color: #DD2328;
     font-weight: bold;
 }
 
-#restart{
+.newgame2{
     margin-top: 5px;
     width: 100px;
     border: 2px solid #1D2A5E;
@@ -188,15 +190,15 @@ body{
     cursor: pointer;
 }
 
-#restart:focus{
+/* #restart:focus{
     outline: none;
-}
+} */
 
-.red:hover{
-    background: darken(#DD2328, 5%);
+#red:hover{
+    background:(#DD2328);
 }
-.red:active{
-    background: darken(#DD2328, 8%);
+#red:active{
+    background: darken(rgb(43, 1, 2), 8%);
 }
 
 .black:hover{
