@@ -1,74 +1,82 @@
-function timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
+var columns = ['a','b','c','d','e','f','g','h'];
+var rows = ['one','two','three','four','five','six','seven',
+'eight'];
+var fadeTime = 300;
 
+var player = 0;
+var colors = ['red', 'black'];
 
+$(".place").click(function(){
+	var classes = ($(this).attr('class')).split(" ");
+	var thisClass = classes[classes.length - 1];
+	var belowClasses = '';
+	var thisId = $(this).parent().attr('id');
+	
+	if ((thisId == "one") == false){
+		var below = (rows[rows.indexOf(thisId) - 1]);
+		belowClasses = ($("#" + below + " ." + thisClass + "").attr('class'));
+		belowClasses = belowClasses.split(" ");
+		if (belowClasses.indexOf("red") >= 0 || belowClasses.indexOf("black") >= 0){
+			var valid = true;
+		}
+		else{
+			valid = false;
+		}
+		if((thisClass == 'black' || thisClass == 'red')){
+			valid = false;
+		}
+	}
+	else{
+		if((thisClass == 'black' || thisClass == 'red')){
+			valid = false;
+		}
+		else{
+			valid = true;
+		}
+	}
+	if(valid){
+		setTimeout(rotateColor(this), fadeTime);
+		rotateRestartColor();
+	}
+});
 
+function rotateColor(t){
+	$(t).fadeOut(fadeTime);
+	setTimeout(function(){
+		$(t).addClass(""+colors[player]+"");
+		player == 0 ? player = 1 : player = 0;
+	}, fadeTime);
+	$(t).fadeIn(fadeTime);
+}
 
-$(document).ready(function() {
+function rotateRestartColor(){
+	if ($("#restart").attr("class") == 'red'){
+		setTimeout(function(){
+			$("#restart").removeClass("red");
+		}, fadeTime);
+		$("#restart").fadeOut(fadeTime);
+		setTimeout(function(){
+			$("#restart").addClass("black");
+		}, fadeTime);
+		$("#restart").fadeIn(fadeTime);
+		
+	}
+	else if($("#restart").attr("class") == 'black'){
+		setTimeout(function(){
+			$("#restart").removeClass("black");
+		}, fadeTime);
+		$("#restart").fadeOut(fadeTime);
+		setTimeout(function(){
+			$("#restart").addClass("red");
+		}, fadeTime);
+		$("#restart").fadeIn(fadeTime);
+	}
+}
 
-  //declare variables
-  var gameBoard = [];
-  var board = document.getElementById("board");
-  var currentRow;
-  var currentPlayer = 1;
-  $('board');
-
-
-  // creates board
-  function buildGameBoard() {
-      gameBoard = [];
-      for (var r = 0; r < 6; r++) {
-          gameBoard[r] = [];
-          for (var c = 0; c < 7; c++) {
-              gameBoard[r].push(0)
-          }
-      }
-    }
-    function gravityCheck(column) {
-    for (var i = gameBoard.length; i <= 0; i--) {
-      if (gameBoard[i][column] !== "1" && gameBoard[i][column] !== "2"){
-        gameBoard[i][column] = currentPlayer;
-        function placeGamePiece(player) {
-        var whichPlayer = 'circlep' + currentPlayer;
-        return currentPlayer;
-      }
-    }
-  }
-  }
-
-    //when a column is clicked, places players piece on the board
-  $('.col').click(function() {
-      console.log(this.classList[1]);
-      console.log(this.classList[2]);
-      console.log(currentPlayer);
-
-
-
-
-      //check for present pieces
-
-
-
-      //call the function to place game pieces on board
-     placeGamePiece(currentPlayer);
-
-
-      // var column;
-
-      // for (var r = 6; r <= 0; c--) {
-
-      //   if ($(this).classList[3] === "empty") {
-      //     //update data html classes add class or remove
-      //     $(this).removeClass("empty");
-      //     break;
-      //     }
-      //   }
-
-      //if not a win then switch players
-      if (currentPlayer === 1) {
-          currentPlayer = 2;
-      } else {
-          currentPlayer = 1;
-      }
-
-    });})}
+$("#restart").click(function(){
+	setTimeout(function(){
+		$(".place").removeClass("red black");
+	}, fadeTime);
+	$("#board").fadeOut(fadeTime);
+	$("#board").fadeIn(fadeTime);
+});
