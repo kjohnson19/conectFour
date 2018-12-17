@@ -186,7 +186,7 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-#restart:hover{
+.newgame2:hover{
     cursor: pointer;
 }
 
