@@ -121,7 +121,7 @@ to { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200p
 }
 
 /* $board-size: 500px;
-$place-size: 32px;
+$hole-size: 32px;
 $bg: #82D0F4;
 $board-bg: #0667B4;
 $border: #1D2A5E;
@@ -150,7 +150,7 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
     width: 2090px;
 }
 
-.place{
+.hole{
     box-shadow:0px 0px 55px yellow;
     width: 80px;
     height:80px;
@@ -161,7 +161,7 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
     border: 2px solid #1D2A5E;
 }
 
-.place:hover{
+.hole:hover{
     cursor: pointer;
     scale: 0.5;
 }
