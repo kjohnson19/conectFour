@@ -7,6 +7,7 @@ font-family: 'Acme', sans-serif;
 text-align: center;
 animation-name: move;
 animation-duration: 2s;
+margin-top: 10px;
 transition: all 2s ease;
 margin-left: 525px;
 }
@@ -18,10 +19,11 @@ margin-left:-1000px;
 100% {
 margin-left: 530px;
 }}
-/* background image- source: https://www.ebay.com/itm/Hasbro-Connect-4-Game/352531569730?_trkparms=aid%3D222007%26algo%3DSIM.MBE%26ao%3D2%26asc%3D20160323102634%26meid%3D6afb38c8839f4f878ce99aec3d34e685%26pid%3D100623%26rk%3D4%26rkt%3D6%26sd%3D323034430832%26itm%3D352531569730&_trksid=p2047675.c100623.m-1 */
+
 #bg1 {
-background: url(/images/c42.png);
-background-size: 100% 100%;
+background: url(/images/sunn.jpg);
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .container {
@@ -30,17 +32,24 @@ flex-wrap: wrap;
 }
 
 #playMe {
-margin-top: 450px;
-margin-left: 600px;
-font-size: 24px;
-height: 60px;
-border-radius: 60px;
+  font-size: 20px;
+  align-items: center;
+  margin-left: 420px;
+  width: 130px;
+  background-color: black;
+  color: white;
+  border: 2px solid #1D2A5E;
+  box-shadow: 0px 0px 25px yellow;
+  border-radius: 40px;
+  font-family: 'Righteous', cursive;
+  margin-top: 450px; 
+  height: 60px;
 -webkit-transition-duration: 0.4s;
 transition-duration: 0.4s;
 }
 
 #playMe:hover {
-background-color: red; 
+background-color: #F309F4; 
 color: white;
 }
 
@@ -49,7 +58,7 @@ margin-left: 30px;
 width: 100px;
 height: 67px;
 border-radius: 50%;
-background-color: #FF5722;
+background-color:#F309F4;;
 animation: bounce 0.5s;
 animation-direction: alternate;
 animation-timing-function: cubic-bezier(.5,0.05,1,.5);
@@ -63,9 +72,9 @@ to { transform: translate3d(0, 180px, 0); }
 
 /* === */
 ball {
+-webkit-animation-direction: alternate;
 -webkit-animation-name: bounce;
 -webkit-animation-duration: 0.5s;
--webkit-animation-direction: alternate;
 -webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
 -webkit-animation-iteration-count: infinite;
 }
@@ -75,7 +84,11 @@ to { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200p
 }
 
 /*============================game page================================ */
-.row, .column {
+.row{
+  display: flex;
+} 
+
+.column {
   display: flex;
 }
 
@@ -85,59 +98,12 @@ to { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200p
   justify-content: center;
 }
 
-.col-1 {
-  width: 10px;
-}
-.col-2 {
-  width: 16.6666666667%;
-}
-.col-3{
-	width: 25%;
-}
-.col-4{
-	width: 33.3333333333%;
-}
-.col-5{
-	width: 1050%;
-}
-.col-6{
-	width: 50%;
-}
-.col-7{
-	width: 58.3333333333%;
-}
-.col-8{
-	width: 66.6666666667;
-}
-.col-9{
-	width: 75%;
-}
-.col-10{
-	width: 83.3333333333%;
-}
-.col-11{
-	width: 40px;
-}
-.col-12{
-	width: 100%;
-}
-
-/* $board-size: 500px;
-$hole-size: 32px;
-$bg: #82D0F4;
-$board-bg: #0667B4;
-$border: #1D2A5E;
-$player-one: #DD2328;
-$player-two: #EED242;
-$ff: "Trebuchet MS", Helvetica, sans-serif; */
-
 .gamebg{
     background: url(/images/maxresdefault.jpg);
     background-size: 100% 100%;
     color: white;
     font-family:Trebuchet MS", Helvetica, sans-serif ;
 }
-
 #board{
     /* margin-left: 80px; */
     margin: auto;
@@ -161,7 +127,7 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
     background: url(/images/tropical.jpeg);
     /* background: #82D0F4; */
     border-radius: 100%;
-    border: 2px solid #1D2A5E;
+    border: 2px solid white;
 }
 
 .hole:hover{
@@ -169,12 +135,12 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
     scale: 1.5;
 }
 
-.yellow{
+.sun{
     background: url(/images/retrosun.jpg);
     background-size: contain;
 }
 
-.purple{
+.moon{
     background: url(/images/bluemoon.png);
     background-size: contain;
 }
@@ -203,4 +169,20 @@ $ff: "Trebuchet MS", Helvetica, sans-serif; */
 
 .black:active{
     background: darken(#EED242, 8%);
+}
+/* ================ rules page ==================== */
+
+#rules {
+  font-weight: bold;
+  text-align: center;
+  background: url(/images/bluegrid.jpg);
+  font-size: 22px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3{
+  font-size: 40px;
+  -webkit-text-stroke: 2px yellow;
 }

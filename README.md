@@ -1,9 +1,6 @@
 
 # Conect Four
 
-
-
-
 # Description
 I have created my version of Connect Four. Two players are able to input their name and begin a new game. Player 1 and player 2 take turns attempting to "connect four". Whichever player connects four first wins the game and can then start a new game. 
 
@@ -28,5 +25,6 @@ In phase 2 of my version of Connect Four,  I would implement a functioning Ai fo
 1. COLOR ROTATOR: https://products.askupasoftware.com/color-rotator/
 2. https://codepen.io/karpimpski/pen/akVGYX
 3. https://sweetalert.js.org/
-4. Grid background: https://www.youtube.com/watch?v=w8ndrYXBXT4
-5. https://www.w3schools.com/css/css_form.asp
+4. https://codeburst.io/tutorial-make-a-bouncing-ball-entirely-with-css-1e7e3c853a50
+5. Grid background: https://www.youtube.com/watch?v=w8ndrYXBXT4
+6. https://www.w3schools.com/css/css_form.asp

@@ -3,7 +3,7 @@
 var allColumns = ['a','b','c','d','e','f','g','h'];
 var allRows = ['one','two','three','four','five','six','seven',
 'eight'];
-var colors = ['yellow', 'purple'];
+var colors = ['sun', 'moon'];
 var fadeTime = 420;
 var player1 = 0;
 
@@ -37,24 +37,24 @@ $(".hole").click(function(){
     // and you have another class "a, b, c, d etc."
     //  and it looks to see which hole to go to. Lastly,
     // when you click on circle it is adding a class of
-    // either "yellow" or "purple"
+    // either "sun(sun)" or "moon(moon)"
     console.log(belowClasses);
 
     belowClasses = belowClasses.split(" ");
     // belowClasses is turned into an array with a space as the separator
-		if (belowClasses.indexOf("yellow") >= 0 || belowClasses.indexOf("purple") >= 0){
+		if (belowClasses.indexOf("sun") >= 0 || belowClasses.indexOf("moon") >= 0){
 			var token = true;
     }
     // declare variable and assigned it to the value of true
 		else{
 			token = false;
 		}
-		if((thisClass == 'purple' || thisClass == 'yellow')){
+		if((thisClass == 'moon' || thisClass == 'sun')){
 			token = false;
 		}
   }
 	else{
-		if((thisClass == 'purple' || thisClass == 'yellow')){
+		if((thisClass == 'moon' || thisClass == 'sun')){
 			token = false;
 		}
 		else{
