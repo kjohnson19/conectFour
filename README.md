@@ -19,6 +19,14 @@ Trello Board- https://trello.com/b/FbO0hf0M/wdi-project-1
 # Future Features
 In phase 2 of my version of Connect Four,  I would implement a functioning Ai for the computer player. I would also alternate the first player to move. Lastly, I would implement a "tie" function to the Connect Four score board. 
 
-#Pre-Planning
+# Pre-Planning
 
 <img src="/images/tropical.jpeg"> 
+
+# Sites & Sources 
+
+1. COLOR ROTATOR: https://products.askupasoftware.com/color-rotator/
+2. https://codepen.io/karpimpski/pen/akVGYX
+3. https://sweetalert.js.org/
+4. Grid background: https://www.youtube.com/watch?v=w8ndrYXBXT4
+5. https://www.w3schools.com/css/css_form.asp
