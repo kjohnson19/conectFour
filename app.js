@@ -17,11 +17,29 @@ $(".hole").click(function(){
   var thisClass = classes[classes.length - 1];
   // returns the number of elements in an array
 	var belowClasses = '';
-	var thisId = $(this).parent().attr('id');
+  var placement = $(this).parent().attr('id');
+  // jquery version of getelementbyid
 	
-	if ((thisId == "one") == false){
-		var below = (allRows[allRows.indexOf(thisId) - 1]);
-		belowClasses = ($("#" + below + " ." + thisClass + "").attr('class'));
+	if ((placement == "one") == false){
+     // this is calling the value in the placement in allRows
+    //  so... if "placement (the circles) is equal 
+    // to the div id of "one"  
+    var below = (allRows[allRows.indexOf(placement) - 1]);
+
+    //  returns the first index where the first time a specified 
+    // value appears can be found in the array or if the
+    //  -1 value is not there. 
+
+    belowClasses = ($("#" + below + " ." + thisClass + "").attr('class'));
+    // calling the "#" which is finding all the ids 
+    // which are the columns.. then the below function is 
+    // looking inside of that div for .hole (".") classes
+    // and you have another class "a, b, c, d etc."
+    //  and it looks to see which hole to go to. Lastly,
+    // when you click on circle it is adding a class of
+    // either "yellow" or "purple"
+    console.log(belowClasses);
+
 		belowClasses = belowClasses.split(" ");
 		if (belowClasses.indexOf("yellow") >= 0 || belowClasses.indexOf("purple") >= 0){
 			var valid = true;
@@ -42,6 +60,7 @@ $(".hole").click(function(){
 		}
 	}
 	if(valid){
+  // site source for color rotate: https://products.askupasoftware.com/color-rotator/
 		setTimeout(rotateColor(this), fadeTime);
 		rotateRestartColor();
 	}
