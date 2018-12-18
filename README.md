@@ -5,7 +5,7 @@
 I have created my version of Connect Four. Two players are able to input their name and begin a new game. Player 1 and player 2 take turns attempting to "connect four". Whichever player connects four first wins the game and can then start a new game. 
 
 # Links
-Connect Four game- 
+Connect Four game- http://awesome-wescoff-13af4d.netlify.com/
 Trello Board- https://trello.com/b/FbO0hf0M/wdi-project-1
 
 # Tech Stuff
@@ -18,7 +18,7 @@ In phase 2 of my version of Connect Four,  I would implement a functioning Ai fo
 
 # Pre-Planning
 
-<img src="/images/image1.jpeg"> 
+<img src="/images/image1.jpeg">  
 
 # Sites & Sources 
 
