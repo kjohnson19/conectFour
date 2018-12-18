@@ -40,26 +40,28 @@ $(".hole").click(function(){
     // either "yellow" or "purple"
     console.log(belowClasses);
 
-		belowClasses = belowClasses.split(" ");
+    belowClasses = belowClasses.split(" ");
+    // belowClasses is turned into an array with a space as the separator
 		if (belowClasses.indexOf("yellow") >= 0 || belowClasses.indexOf("purple") >= 0){
-			var valid = true;
-		}
+			var token = true;
+    }
+    // declare variable and assigned it to the value of true
 		else{
-			valid = false;
+			token = false;
 		}
 		if((thisClass == 'purple' || thisClass == 'yellow')){
-			valid = false;
+			token = false;
 		}
 	}
 	else{
 		if((thisClass == 'purple' || thisClass == 'yellow')){
-			valid = false;
+			token = false;
 		}
 		else{
-			valid = true;
+			token = true;
 		}
 	}
-	if(valid){
+	if(token){
   // site source for color rotate: https://products.askupasoftware.com/color-rotator/
 		setTimeout(rotateColor(this), fadeTime);
 		rotateRestartColor();
