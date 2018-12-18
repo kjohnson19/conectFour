@@ -9,8 +9,13 @@ var player1 = 0;
 
 $(".hole").click(function(){
   // declare variables for the onclick event for playing game
-	var classes = ($(this).attr('class')).split(" ");
-	var thisClass = classes[classes.length - 1];
+  var classes = ($(this).attr('class')).split(" ");
+  // splits the string into an array by spaces and 
+  // splits a string into an array of substrings
+  // gives back new array of words.
+
+  var thisClass = classes[classes.length - 1];
+  // returns the number of elements in an array
 	var belowClasses = '';
 	var thisId = $(this).parent().attr('id');
 	
