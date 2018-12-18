@@ -18,7 +18,7 @@ In phase 2 of my version of Connect Four,  I would implement a functioning Ai fo
 
 # Pre-Planning
 
-<img src="/images/tropical.jpeg"> 
+<img src="/images."> 
 
 # Sites & Sources 
 
