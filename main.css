@@ -170,6 +170,15 @@ to { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200p
 .black:active{
     background: darken(#EED242, 8%);
 }
+
+h4{
+    height: 100px;
+    text-align: center;
+    width: 100px;
+    font-size: 30px;
+    border: solid yellow;
+
+}
 /* ================ rules page ==================== */
 
 #rules {
