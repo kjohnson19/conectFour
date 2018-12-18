@@ -52,7 +52,7 @@ $(".hole").click(function(){
 		if((thisClass == 'purple' || thisClass == 'yellow')){
 			token = false;
 		}
-	}
+  }
 	else{
 		if((thisClass == 'purple' || thisClass == 'yellow')){
 			token = false;
@@ -64,7 +64,9 @@ $(".hole").click(function(){
 	if(token){
   // site source for color rotate: https://products.askupasoftware.com/color-rotator/
 		setTimeout(rotateColor(this), fadeTime);
-		rotateRestartColor();
+    rotateRestartColor();
+    // this is setting up the color change event that happens 
+    // when players switch turns
 	}
 });
 
