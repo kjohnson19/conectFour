@@ -13,12 +13,18 @@
 <!-- ============================================================ -->
 <body class="gamebg">
 
-<h2> READY.....SET....GO! </h2>
+<!-- <h2> READY.....SET....GO! </h2> -->
 <div class="score"></div>
 <div class="score">
-    <input 
-    <h4>Score</h4>
+    <input id="score" type="number"> Score
 </div>
+<br>
+<br>
+<form action="/action_page.php">
+    Player 1: <input type="text" id="players" name="FirstName" placeholder="first name here" value=""><br>
+    Player 2: <input type="text" id="players" name="LastName" placeholder ="first name here" value=""><br>
+   
+    </form>
 <div id="board">
         
             
@@ -96,11 +102,7 @@
                         <a href="../index.html"><button class="gameRules">Home</button></a>
                     </div>
         </div>
-        <form action="/action_page.php">
-            Player 1: <input type="text" name="FirstName" placeholder="first name here" value=""><br>
-            Player 2: <input type="text" name="LastName" placeholder ="first name here" value="Mouse"><br>
-            <input type="submit" value="Submit">
-            </form>
+       
             
 </body>
 </html>

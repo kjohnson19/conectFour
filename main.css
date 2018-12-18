@@ -179,6 +179,14 @@ h4{
     border: solid yellow;
 
 }
+#players {
+font-size: 15px;
+color: purple;
+}
+.score{
+    font-size: 15px;
+    font-weight: bold;
+}
 /* ================ rules page ==================== */
 
 #rules {
