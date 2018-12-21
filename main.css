@@ -24,6 +24,7 @@ margin-left: 530px;
 background: url(/images/sunn.jpg);
 background-size: cover;
 background-repeat: no-repeat;
+height: 100vh;
 }
 
 .container {
